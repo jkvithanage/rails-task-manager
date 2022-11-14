@@ -1,8 +1,6 @@
-<div class="container">
-  <h1>My Tasks</h1>
-  <ul>
-    <% @tasks.each do |task| %>
-      <li> <%= task.title %> </li>
-    <% end %>
-  </ul>
-</div>
+<h1>My Tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.title, "/tasks/#{task.id}" %></li>
+  <% end %>
+</ul>
